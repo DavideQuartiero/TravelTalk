@@ -879,7 +879,7 @@ async function callClaude(system, userMsg, history){
   if(system) body.system=system;
   const res=await fetch('https://api.anthropic.com/v1/messages',{
     method:'POST',
-    headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-version':'2023-06-01'},
+    headers:{'Content-Type':'application/json'},
     body:JSON.stringify(body)
   });
   const data=await res.json();
